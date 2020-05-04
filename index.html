@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anthony's Library</title>
+  <link rel="stylesheet" type="text/css" href="css\style.css"/>
+</head>
+<style>
+  body {background-color: black;}
+  p {color: LightGray;}
+  li {color: LightGray;}
+  audio {display:none;}
+</style>
+<body>
+  <div id="container">
+    <h1><p>Welcome to my homepage!</p></h1>
+    <div id="content">
+        <div id="nav">
+          <h3> Navigation </h3>
+          <ul>
+            <li><a href="aboutme.html">About me</a></li>
+            <li><a href="overview.html">Modules</a></li>
+          </ul>
+        </div>
+        <div id="main">
+          <h2><p>About This Page</p></h2>
+            <p>This page will be my documentation of my time in <b>Digital Fabrication & Prototyping Fundamentals</b>.
+              I intend to eventually make it a documentation of everything I have done so far when I find the time to do so.
+              From time to time, I would add new things I have learnt along the way on a separate page connected to this one,
+              hence why I named this my library.
+            </p>
+            <p>That is all for now. Please keep a look out for new updates here!</p>
+            <h3><p>Reminder to you and I: You can always do better!</p></h3>
+            <img src="media\You Can Do Better!.png" alt="You can always do better" width="500" height="auto">
+        </div>
+    </div>
+  </div>
+  <div id="footer">
+    <h6><p>Music used is "Fate Grand Order Ost 1-2 My room". It is not intended for money-making purposes.</p></h6>
+  </div>
+ <audio id="My Room" controls autoplay loop>
+   <source src="media\Fate Grand order OST 1-2 My room.mp3"  type="audio/mp3">
+   <p>
+     Your browser does not support the audio element.
+   </p>
+ </audio>
+ <script>
+  var vol = document.getElementById("My Room");
+  vol.volume = 0.00;
+ </script>
+ <!--  Alternative Music that I can use: "The Corridor of Memories - FateGrand Order - Original Soundtrack I.mp3"
+  That is how you set variables.
+   also this can be set outside the script to manually button click things
+   {
+   <button onclick="getVolume()" type="button">What is the volume?</button>
+   <button onclick="setHalfVolume()" type="button">Set volume to 0.2</button>
+   <button onclick="setFullVolume()" type="button">Set volume to 1.0</button><br>
+   }
+   and this in the script to correspond to the button click
+   {
+     function getVolume() {alert(vol.volume);}
+     function setHalfVolume() {vol.volume = 0.2;}
+     function setFullVolume() {vol.volume = 1.0;}
+   }-->
+</body>
+</html>
