@@ -11,15 +11,15 @@
   audio {display:none;}
 </style>
 <body>
+  <h1><p>Welcome to my homepage!</p></h1>
   <div id="container">
-    <h1><p>Welcome to my homepage!</p></h1>
     <div id="content">
         <div id="nav">
-          <h3> Navigation </h3>
-          <ul>
-            <li><a href="index.html"> Home</a></li>
-            <li><a href="overview.html">Modules</a></li>
-          </ul>
+          <h3> Navigation --> |
+              <a href="index.html"> Home</a> |
+              <a href="aboutme.html">About Me</a> |
+              <a href="overview.html">Modules</a> |
+          </h3>
         </div>
         <div id="main">
           <table style="width:100%">
@@ -66,32 +66,7 @@
     </div>
   </div>
   <div id="footer">
-    <h6><p>Music used is "Fate Grand Order Ost 1-2 My room". It is not intended for money-making purposes.</p></h6>
     <h4><p><a href="index.html"> Return to homepage</a></p></h4>
   </div>
- <audio id="My Room" controls autoplay loop>
-   <source src="media\Fate Grand order OST 1-2 My room.mp3"  type="audio/mp3">
-   <p>
-     Your browser does not support the audio element.
-   </p>
- </audio>
- <script>
-  var vol = document.getElementById("My Room");
-  vol.volume = 0.00;
- </script>
- <!--  Alternative Music that I can use: "The Corridor of Memories - FateGrand Order - Original Soundtrack I.mp3"
-  That is how you set variables.
-   also this can be set outside the script to manually button click things
-   {
-   <button onclick="getVolume()" type="button">What is the volume?</button>
-   <button onclick="setHalfVolume()" type="button">Set volume to 0.2</button>
-   <button onclick="setFullVolume()" type="button">Set volume to 1.0</button><br>
-   }
-   and this in the script to correspond to the button click
-   {
-     function getVolume() {alert(vol.volume);}
-     function setHalfVolume() {vol.volume = 0.2;}
-     function setFullVolume() {vol.volume = 1.0;}
-   }-->
 </body>
 </html>
