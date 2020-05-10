@@ -4,15 +4,9 @@
   <title>Anthony's Library</title>
     <link rel="stylesheet" type="text/css" href="..\css\style.css"/>
 </head>
-<style>
-  body {background-color: black;}
-  p {color: LightGray;}
-  li {color: LightGray;}
-  audio {display:none;}
-</style>
 <body>
   <div id="header">
-    <h1></h1>
+    <h1>Developing Websites</h1>
   </div>
   <div id="container">
     <div id="content">
@@ -24,12 +18,86 @@
           </h3>
         </div>
         <div id="main">
+          <p>
+            We will create a simple website to help understand how html based websites work.
+            To note: Text written in "/** **/" are for explanation. no need to include it in yours.
+          </p>
+          <!--Start of example-->
+        <xmp>
+            <!DOCTYPE html> /** To Declare what kind of page this is**/
 
+            <html> /** the start of your page**/
+
+            <head> /** to tell the website what appears at the tab**/
+
+              <title>Anthony's Library</title> /** what shows at your tab's title**/
+
+            </head>
+
+            <style> /** tells you what style the page has **/
+
+              body {background-color: lightgrey;} /** tells website that the background color of website is black**/
+
+              p {color: black;} /** tells website that font color is lightgrey **/
+
+            </style> /** ends the stlying section of the page **/
+
+            <body> /** beginning of the main content of the page **/
+
+              <h1></h1> /** h means header, goes from 1 to 6, increasing number = small font size **/
+
+            </body> /** end of main content **/
+
+            </html> /** end of page **/
+
+          </xmp>
+          <p> That will only create a basic layout, however.
+              You should use "css" to spice up your webpage.
+          </p>
+          <p>  You need to name the file which contains what format you want the webpage
+              to ".css". Then, you reference it in &#60;Header&#62; as
+              "&#60;link rel="stylesheet" type="text/css" href="directory to the file"/&#62;".
+          </p>
+          <p> this is how it works for the ".css": </p>
+          <xmp>
+
+            body /** the category you want to format **/
+            {
+            	background-color: #000000; /** things you want to change **/
+            	font-family: Helvitica, Arial, sans-serif;
+            }
+
+            /** you can format for more than 1 category at a time, as long as format are applicable to all  **/
+            /** like this:**/
+            table, th, td
+            {
+              border: 10px solid blue;
+            } /** opening and closing brackets " { " and " } " **/
+
+          </xmp>
+          <p>
+            You should always keep an easily ascessible template of your website's general layout,
+            so that you can save time in creating webpages.
+          </p>
+          <p> You can go to w3schools and youtube to furthur learn how to add other stuff in, like adding links, audio and inserting images. </p>
         </div>
     </div>
   </div>
   <div id="footer">
-    <h4><p><a href="Wk1_Safety.html"> Return to Top</a></p></h4>
+    <h4><p><a href="Wk3_Development.html"> Return to Top</a></p></h4>
   </div>
+  <div id="footer">
+    <h4>
+      <p>
+        command &#60;xmp&#62; taken from <u><a href="https://www.quora.com/How-do-I-Display-HTML-code-on-Web-Page">here</a></u> ,
+        html codes for &#60; and &#62; taken from <u><a href="https://www.rapidtables.com/web/html/html-codes.html"> here</a></u>
+      </p>
+    </h4>
 </body>
 </html>
+<!--  content:
+how to write a simple webpage (simple) [done]
+furthur webpage writing - css [done]
+keeping a template [done]
+futhur reading/references [done]
+-->

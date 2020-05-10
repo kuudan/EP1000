@@ -3,15 +3,29 @@ body {
 	font-family: Helvitica, Arial, sans-serif;
 }
 
+table, th, td {
+  border: 10px solid blue;
+}
+
+xmp {
+	background-color: gray;
+	text-decoration: none;
+	color: black;
+  display: block;
+  font-family: monospace;
+}
+
 a {
 	text-decoration: none;
 	color: lightgrey;
 }
 
-h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	color: lightgrey;
 }
+
+ul, li {color: LightGray;}
 
 #container {
 	background-color: black;
