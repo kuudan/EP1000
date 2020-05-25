@@ -16,8 +16,8 @@ xmp {
 }
 
 a {
-	text-decoration: none;
 	color: lightgrey;
+	text-decoration-line: underline;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
