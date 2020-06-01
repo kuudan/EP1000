@@ -21,7 +21,7 @@ a {
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-	margin: 0;
+	margin: 1px;
 	color: lightgrey;
 }
 
@@ -29,14 +29,8 @@ ul, li {color: LightGray;}
 
 #container {
 	background-color: black;
-	width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#container {
-  display: flex;
-  justify-content: space-evenly;
+	width: auto;
+	font-size: 2vw;
 }
 
 #header {
@@ -44,6 +38,7 @@ ul, li {color: LightGray;}
 	color: white;
 	text-align: center;
 	padding: 10px;
+	width: auto;
 }
 
 #content {
@@ -53,8 +48,8 @@ ul, li {color: LightGray;}
 #nav {
 	background-color:#999999;
 	color: black;
-	width: 100%;
-	float: left;
+	width: auto;
+	text-align: left;
 }
 
 #nav ul {
@@ -68,7 +63,7 @@ ul, li {color: LightGray;}
 
 #main {
 	width: 800px;
-	float: right;
+	float: left;
 }
 
 #footer {
