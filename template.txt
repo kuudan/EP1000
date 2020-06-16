@@ -4,12 +4,6 @@
   <title>Anthony's Library</title>
   <link rel="stylesheet" type="text/css" href="css\style.css"/>
 </head>
-<style> <!-- incase needed -->
-  body {background-color: black;}
-  p {color: LightGray;}
-  li {color: LightGray;}
-  a {color: LightGray;}
-</style>
 <body>
   <div id="header">
     <h1> </h1>
@@ -32,3 +26,10 @@
   </div>
 </body>
 </html>
+
+<style> <!-- incase needed -->
+  body {background-color: black;}
+  p {color: LightGray;}
+  li {color: LightGray;}
+  a {color: LightGray;}
+</style>

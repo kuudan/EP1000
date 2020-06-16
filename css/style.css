@@ -12,26 +12,31 @@ xmp {
 	text-decoration: none;
 	color: black;
   display: block;
+	padding: 10px;
+	width: auto;
+	max-width: 1500px;
   font-family: monospace;
+	overflow: scroll;
+	font-size: 2vw;
 }
 
-a {
+a, img {
 	color: lightgrey;
 	text-decoration-line: underline;
+	font-size: 2vw;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, ul, li {
 	margin: 1px;
 	color: lightgrey;
+	font-size: 2vw;
 }
-
-ul, li {color: LightGray;}
 
 #container {
 	background-color: black;
 	width: auto;
-	font-size: 2vw;
 }
+
 
 #header {
 	background-color: #3b5961;
@@ -39,6 +44,7 @@ ul, li {color: LightGray;}
 	text-align: center;
 	padding: 10px;
 	width: auto;
+	display: block;
 }
 
 #content {
@@ -50,6 +56,8 @@ ul, li {color: LightGray;}
 	color: black;
 	width: auto;
 	text-align: left;
+	padding: 10px;
+	display: block;
 }
 
 #nav ul {
@@ -62,14 +70,13 @@ ul, li {color: LightGray;}
 }
 
 #main {
-	width: 800px;
+	width: auto;
 	float: left;
 }
 
 #footer {
 	float: right;
 	clear: both;
-	padding: 10px;
 	background-color: #999999;
 	color: white;
 	text-align: right;

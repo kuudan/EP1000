@@ -51,8 +51,8 @@
             </body> /* end of main content */
 
             </html> /* end of page */
-
           </xmp>
+
           <p> That will only create a basic layout, however.
               You should use "css" to spice up your webpage.
           </p>
@@ -61,8 +61,8 @@
               "&#60;link rel="stylesheet" type="text/css" href="directory to the file"/&#62;".
           </p>
           <p> this is how it works for the ".css": </p>
-          <xmp>
 
+          <xmp>
             body /* what you want to format */
             {
             	background-color: #000000; /*things you want to change */
@@ -76,7 +76,34 @@
             /*opening and closing brackets " { " and " } " */
           </xmp>
 
-          <h3>Section 2: Hosting your own website</h3>
+          <h3>Section 2: Useful Attributes</h3>
+          <p>We can add images through the use of &#60;img&#62;</p>
+          <xmp>
+            <img src="z" height="x" width="y" alt="text in case you cannot locate image">
+             src = source image, can be a .gif too
+             z = where your image file is with respect to the page you are at OR a link
+             x = a number or "auto" (auto = auto sizing)
+             y = same type of value as x
+             alt="" is important to show an alternative
+          </xmp>
+          <p> for example, this(you can right-click the image and click inspect element to investigate it): </p>
+            <img src="..\media\a prayer for chance.png" height="auto" width="500px" alt="praying for a chance">
+
+          <p>another thing you can add is links, through the use of &#60;href&#62;</p>
+          <xmp>
+            <a href="link">[what the link should say]</a>
+            OR
+            <a href="link" [target]>
+              <img src="images" alt="text" width="value" height="value">
+              [target]=how the page will be opened, i.e. new tab, new window, on the same window/tab, etc
+              what you can put into [target]: _self , _blank , _parent , top
+          </xmp>
+            <p>here is an example:</p>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                <img src="https://i.pinimg.com/originals/5f/24/26/5f242686e1b2ca9677023947ce4edd2a.gif" alt="a surprise" width="300px" height="auto" >
+              </a>
+
+          <h3>Section 3: Hosting your own website</h3>
           <p>
             Now that you have made your own website, you can host it on a hosting website!
             I strongly recommend using <a href="https://github.com/">github.com</a> to upload your creations.
@@ -84,32 +111,21 @@
             users and restore from an older version. Create a repository and upload your contents in the repository.
           </p>
 
-          <h3> Section 3: Using github desktop</h3>
-          <p>
-            I'm sure it's annoying to open <a href="https://github.com/">github.com</a> everytime you want to update/upload something from your desktop.
-            You can instead use github desktop to get rid of the hassle. With github desktop, once you connect the local repository(i.e. the offline version
-            that you edit and have in your desktop) and your account to the app, it will detect any changes and you can then push the updates from the app directly to github.
-          </p>
-
           <h3>Tips:</h3>
           <p>
             You should always keep an easily ascessible template of your website's general layout,
             so that you can save time in creating webpages.
           </p>
-          <p> You can go to w3schools and youtube to furthur learn how to add other stuff in, like adding links, audio, images, and interactive content.</p>
+          <p> You can go to w3schools and youtube to furthur learn how to add other stuff in, like audio and interactive content.</p>
         </div>
     </div>
   </div>
   <div id="footer">
     <h4><p><a href="WebDevelopment.html"> Return to Top</a></p></h4>
   </div>
-  <div id="footer">
-    <h4>
-      <p>
-        command &#60;xmp&#62; taken from <u><a href="https://www.quora.com/How-do-I-Display-HTML-code-on-Web-Page">here</a></u> ,
-        html codes for &#60; and &#62; taken from <u><a href="https://www.rapidtables.com/web/html/html-codes.html"> here</a></u>
-      </p>
-    </h4>
+
+  <!--command &#60;xmp&#62; taken from <u><a href="https://www.quora.com/How-do-I-Display-HTML-code-on-Web-Page">here</a></u> ,
+        html codes for &#60; and &#62; taken from <u><a href="https://www.rapidtables.com/web/html/html-codes.html"> here</a></u>-->
 </body>
 </html>
 <!--  content:
@@ -119,3 +135,4 @@ keeping a template [done]
 futhur reading/references [done]
 need to add content about github, desktop app pushing content [think done?]
 -->
+<!--things to add: how to add links, audio, img, and the xmp here. -->
