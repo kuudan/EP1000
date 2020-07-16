@@ -6,7 +6,7 @@
 </head>
 <body>
   <div id="header">
-    <h1></h1>
+    <h1>led</h1>
   </div>
   <div id="container">
     <div id="content">
@@ -17,11 +17,61 @@
               <a href="..\..\overview.html">Modules</a> |
         </div>
         <div id="main">
+          <p>in this page, you will make your own led circuit.</p>
+          <p>you will need: 1 led, 1 resistor, 2 wires, 1 breadboard, 1 arduino uno, 1 computer to program the arduino</p>
+          <p>first, let's understand an led so that we wont accidentally kill it.</p>
+          <img src="..\..\media\green led.jpg" alt="green led and part">
+          <p>as you see from this <a href="https://en.wikipedia.org/wiki/Light-emitting_diode">wikipedia image</a>, the flat side of the led is the negative side of the led. make sure to connect this part to the ground.</p>
+          <img src="..\..\media\led circuit.png" alt="an example led circuit">
+          <p>from this image, the cathode (negative side) of the led is connected to the GND (known as ground). The anode (postive side) of the led is connected to a resistor and a number (in this case, 2) on the other side of the arduino.
+            The resistor must be placed at the anode side to prevent the current from breaking the led.
+            We will explain more about it in detail later in this page. The next section here will talk about the code</p>
+          <xmp>
+            //Example Code of a working LED.
+            //Will light up initially, wait for 1s before light is off
+            //will wait for 1s before light turns on. then the cycle repeats
+            void setup()
+            {
+              pinMode(2, OUTPUT);
+            }
+
+            void loop()
+            {
+              digitalWrite(2, HIGH);
+              delay(1000); // Wait for 1000 millisecond(s)
+              digitalWrite(2, LOW);
+              delay(1000); // Wait for 1000 millisecond(s)
+            }
+          </xmp>
+            <iframe width="900" height="900" src="https://www.tinkercad.com/embed/676ve778iH5?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            <p>note that all the code here is case sensitive. The way it is coded is very similar to c++, but do note that it isnt c++, nor based off c++.
+              You can, however, make use of a sufficiently good amount of c++ knowledge to help you in coding arudino boards.</p>
+            <p>"void setup()" here means the inital code, that means this code will only run once at the start of the program.</p>
+            <p>
+              "pinMode" declares the pin to the respective pin type. for example, this circuit only uses pin 2.
+              the pin types are as follow: OUTPUT, INPUT and INPUT_PULLUP.
+              OUTPUT means that it can only output a result, i.e. whether or not you choose to light up the led.
+              INPUT means it can only take in inputs, i.e. when you type in a number to call someone.
+              INPUT_PULLUP is the same as INPUT, but it "pulls up" the arduino's internal 50k ohm resistor.
+              You use it when there can be a short/open circuit in your circuit.
+            </p>
+            <p>"void loop()" means that the code in this will run repeatedly, from start to end.</p>
+            <img src="..\..\media\led pin.png" alt="led pin, digital" width="600" height="auto">
+            <p>
+              "digitalWrite" can only be used for the pins on the top side of the circuit.
+              The things to write in digitalWrite are the pin number and the state.
+              In the code, you see "digitalWrite(2, HIGH)" and "digitalWrite(2, LOW)".
+              Alternatively, you can use 1 to replace HIGH and 0 to replace LOW.
+            </p>
+            <p>
+              "delay" here is as it sounds -- it delays the program. it makes the arudino board "sleep" in milliseconds.
+              That means nothing can change or happen during this time period, allowing you to see that the led will light up for 1 seconds before being switched off for 1 seconds.
+            </p>
         </div>
     </div>
   </div>
   <div id="footer">
-    <h4><p><a href="..\ldr_rgb led.html">Return to CAD page</a></p></h4>
+    <h4><p><a href="..\arduino.html">Return to Arduino Page</a></p></h4>
   </div>
 </body>
 </html>
