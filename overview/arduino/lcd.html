@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anthony's Library</title>
+  <link rel="stylesheet" type="text/css" href="..\..\css\style.css"/>
+</head>
+<body>
+  <div id="header">
+    <h1>LCDs and 7-segment displays</h1>
+  </div>
+  <div id="container">
+    <div id="content">
+        <div id="nav">
+          <h3> Navigation --> |
+              <a href="..\..\index.html"> Home</a> |
+              <a href="..\..\aboutme.html">About Me</a> |
+              <a href="..\..\overview.html">Modules</a> |
+        </div>
+        <div id="main">
+    <p>hey, this page isnt up to date yet. come by later</p>
+//
+
+1. wiring
+2. code
+3. explanation
+4. video
+
+//
+    lcd (i2c) -> has 16 pins. go look website for details. 2 libaries [wire.h and liquidcrystal.h]. A4 & 5 SDA and SCL respectively. is also @ digital pins, above aref & gnd.
+    Each I2C device needs unique address as long as they are on the bus (daily chain connection)
+    adjust screw on blue thing at piggyback (black thing at back) to adjust sensitivity.
+    makerguide / github for the library, wire.h included in intital install.
+    we be using 16x2, so need change the 20x4 to 16x2
+
+    <!-- Tinkercad Circuits LCD doesn't have I2C piggyback, so you need to wire all the pins. I2C LCD is preferred, as it reduces # of pins required.
+You need to install I2C LCD library to use this display. Do note that there are different versions of the I2C piggyback module, so library must be matched to your specific module.
+-->https://www.wikihow.com/Wire-a-Potentiometer
+segment display components -> shows numbers only. needs library. can set raw value, decimal number, brightness of display, clearing display.
+        </div>
+    </div>
+  </div>
+  <div id="footer">
+    <h4><p><a href="..\arduino.html">Return to Arduino Page</a></p></h4>
+  </div>
+</body>
+</html>
