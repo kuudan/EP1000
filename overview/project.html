@@ -21,89 +21,19 @@
 
           <h4 id="assignment1">assignment1</h4>
             <p>For this assignment, we are to create a 3D model that is difficult to do in conventional methods, utlize the parameter settings, ensure it is within 30mm x 30mm x 30mm and keep it within 30mins print time.</p>
-          <p>It took me a few days to figure out what I should make, since there was a lot of choices available.
-            What gave me a rough idea of what to make was this image that the teacher showed as an example(might be different, since i took this image off the internet):</p>
-            <img src="..\media\ball cube.jpeg" alt="image of ball in cube" height="300" width="auto">
-          <p>After that, I thought to myself: "What if I made it such that you could move something in this model, but never be able to take it out no matter how you try?"
-          Then I started drawing a simple idea in autocad</p>
-          <img src="..\media\assignment1idea.png" alt="drawing of idea" height="300" width="auto">
-          <p> I then started making a model in fusion360.</p>
-          <img src="..\media\Toy Box V2 1.png" alt="step 1 of 6" height="300" width="auto">
-          <img src="..\media\Toy Box V2 2.png" alt="step 2 of 6" height="300" width="auto">
-          <img src="..\media\Toy Box V2 3.png" alt="step 3 of 6" height="300" width="auto">
-          <img src="..\media\Toy Box V2 4.png" alt="step 4 of 6" height="300" width="auto">
-          <img src="..\media\Toy Box V2 5.png" alt="step 5 of 6" height="300" width="auto">
-          <img src="..\media\Toy Box V2 6.png" alt="step 6 of 6" height="300" width="auto">
-          <img src="..\media\Toy Box V2 Side1.png" alt="side 1" height="300" width="auto">
-          <img src="..\media\Toy Box V2 Side2.png" alt="side 2" height="300" width="auto">
-          <img src="..\media\Toy Box V2 Side3.png" alt="side 3" height="300" width="auto">
-          <p> So firstly, I made a box. Then I shelled it with 2mm wall thickness. Following that, I made a hole on 4 sides, each a different shape. Afterwards, I extruded the shape matching the holes.
-            Lastly, I extruded an extension at the back and extruded a smaller cube in the middle to prevent it from being taken out from either side.</p>
-          <p>When I sliced the model, I realized I needed support, and the printing time was 48mins, so I scaled it in the Cura app to 20mmx20mmx16.7mm, which reduced the time taken to 20mins.</p>
-          <ul>settings used:
-            <li><img src="..\media\Settings1.png" alt="settings 1 of 3" height="300" width="auto"></li>
-            <li><img src="..\media\Settings2.png" alt="settings 2 of 3" height="300" width="auto"></li>
-            <li><img src="..\media\Settings3.png" alt="settings 3 of 3" height="300" width="auto"></li>
-          </ul>
-          <iframe src="https://a360.co/2Yzjv6G" height="900" width="900"></iframe>
+              <a href="projects\assignment1.html">here to go look at my group's project</a>
 
-          <h4 id="3d print properties">3D Print Properties</p>
-            <p>For the group assignment, I am working together with Caleb Yeow and Quan Yao.</p>
-            <a href="https://mtgbootz.github.io/3Dprinting-grp/3Dprinting-group">click here to see our findings.</a>
-            <p>For this assignment, I am working on wall thickness.</p>
-            <p>I have picked a range of values for thickness, ranging from 0.5mm to 3.0mm, to test the lowest limits and by what thickness I should stop at for small models. This was the original design:</p>
-            <img src="..\media\Wall Thickness 2D.png" alt="plan" height="600" width="auto">
-            <p>However, halfway through I realized that 3.0mm might be too thick, so I had reduced the maximum thickness to 2.0mm. To ensure sufficient spacing between each wall, I increased the width to 20mm and the length to 30mm </p>
-            <p>I have also tested for accuracy of the wall thickness up to 2 decimal points, but I wouldn't know the results until it is printed.</p>
-            <img src="..\media\wall thickness top.png" alt="top" height="300" width="auto">
-            <p>I have also tried to test for maximum height possible before failure for 1.0mm. However, I hypothesize that I would not be able to test the limits for this part due to dimensional constraints.</p>
-            <img src="..\media\wall thickness front.png" alt="front view" height="300" width="auto">
-            <p>When I sliced the model, I saw that 0.5mm is still sliceable, so I tried to go for the lowest possible it can go, and found out that it cannot slice at 0.4mm.</p>
-            <p>I have also tested the values between  0.4mm to 0.5mm, and 0.41mm is the absolute minimum that we can go before cura is unable to slice it. The final model will have 0.41mm as its minimal wall thickness</p>
-            <img src="..\media\wall thickness sliced.png" alt="plan" height="300" width="auto">
+          <h4 id="3d print properties">3D Print Properties</p></h4>
+            <a href="projects\group project.html">here to go look at my group's project</a>
 
             <h4 id="emp">Final Project</h4>
-              <p> for the final project, i will make a combination of 2 suggestions from <a href="https://rdorville.github.io/EP1000/finalProject/Final%20Project.html">here</a>.</p>
-              <ul>
-                <p>General Idea: I would like to make a mood lamp that can display eniviromental readings</p>
-                <h5>Specifics:</h5>
-                <ul>
-                  <li>1. It will only react when there is an object within a distance</li>
-                  <li>2. It will read temperature. If it is too hot, the lamp will turn blue and the display will say that its too hot.</li>
-                  <li>3. It will read humidity. If it is too humid, the lamp would turn red and ask you to create some ventilation</li>
-                  <li>4. If there is something too near the lamp, the lamp will turn red and tell you to move away from it.</li>
-                  <li>5. By default, the lamp will be X(undecided)</li>
-                  <li>6. If, after a certain period of time, there is no change in response, the lamp will switch its lights off when there is no object in the surroundings/no change in conditions from default (when the light is X, the neutral state for this project)</li>
-                  <li>7. A button to switch on and off the lights</li>
-                  <li>8. A potential meter to allow users to adjust conditions in 1., 2., 3.</li>
-                </ul>
-                <h5>Who is it intended for:</h5>
-                  <p>students who use a computer for long periods of time</p>
-                  <h6>reasons:</h6>
-                  <ul>
-                    <li>1. Due to the current pandemic (in 2020), a lot of students have to sit in front of the computer for prolonged periods of time. This lamp will be able to help keep students in check.</li>
-                    <li>2. When engrossed and/or immersed in their studies, students tend to not take notice of their surroundings -- of which one of them is gluing their eyes to the computer. the lamp will be able to tell the student through the change in color.</li>
-                    <li>3. Students also tend to play games. Some of these games can overheat the computer. While it is easy to notice how hot the computer has become, sometimes they will ignore it. the lamp can help remind them by telling them that it is too hot.</li>
-                    <li>4. Comfort is important. Humidity/Temperature affects comfort a lot. The sensors can help inform students that the environment is too humid, which will prompt the to reduce humidty, improving their comfort and hence their ability to learn.</li>
-                  </ul>
-                <h5>Materials needed:</h5>
-                  <ul>
-                    <li>1 Slide Button preferred, but 1 Push button is okay too</li>
-                    <li>1 Breadboard</li>
-                    <li>1 Arduino</li>
-                    <li>1 LCD display</li>
-                    <li>1 RGB LED</li>
-                    <li>15 male to female wires</li>
-                    <li>about 10? male to male wires</li>
-                    <li>1 potential meter</li>
-                    <li>1 infared sensor / ultrasonic</li>
-                  </ul>
-              </ul>
+            <p> for the final project, i will make a combination of 2 suggestions from <a href="https://rdorville.github.io/EP1000/finalProject/Final%20Project.html">here</a>.</p>
+            <a href="projects\final project.html">here to go look at my final project</a>
         </div>
     </div>
   </div>
   <div id="footer">
-    <h4><p><a href="project.html"> Return to Top</a></p></h4>
+    <h4><p><a href="..\overview.html"> Return to top</a></p></h4>
   </div>
 </body>
 </html>

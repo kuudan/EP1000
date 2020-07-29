@@ -17,158 +17,17 @@
               <a href="..\..\overview.html">Modules</a> |
         </div>
         <div id="main">
-        <img src="..\..\media\debounce circuit.png" alt="debounce circuit">
-        <xmp>
-          //switching led color via button
-          //controlling brightness via potential meter (soon tm)
-          //reset after long press (3000ms)
-          //13 - red, 12 - orange, 11 - green, 10 - white
-          // 9 - button, - potential meter
-
-          const int R=13, O=12,G=11, W=10, B=9;
-          //R=red, O=orange,G=green, W=white, B=button
-          int state, count, prevstate;
-          //state= button state, count=tracking button count
-          const int i=10, a=300;
-          // i is for number of loops for flash, a is number of milliseconds delay
-          int j=0;
-          // j is the loop counter
-          unsigned long prevt; //for timer -> t = time, prev=previous
-
-
-          void setup()
-          {
-            pinMode(R,OUTPUT);
-            pinMode(O,OUTPUT);
-            pinMode(G,OUTPUT);
-            pinMode(W,OUTPUT); //all these R,O,G,W for led
-            pinMode(B,INPUT_PULLUP); //button, input_pulup -> 10k res
-            Serial.begin(9600); //records value for monitoring
-            prevt=millis();
-          }
-
-          void loop()
-          {
-            state=digitalRead(B);
-            if (state==1)
-            {
-              prevstate=state;
-              debounce();
-              led();
-            }
-          }
-
-          void debounce(){
-            prevt=millis();
-            while (state=1 && prevstate==state){
-              Serial.println(state);
-              state=digitalRead(B);
-              if ((millis()-prevt)>3000){
-                Serial.println("restarting");
-                count=0;
-    	          digitalWrite(R,LOW);
-    	          digitalWrite(O,LOW);
-    	          digitalWrite(G,LOW);
-    	          digitalWrite(W,LOW);
-                Serial.println("restart complete");
-                delay(5000);
-                break;
-                }
-              else {
-                Serial.print(millis());
-                Serial.print(" - ");
-                Serial.print(prevt);
-                Serial.print(" = ");
-                Serial.println(millis()-prevt);
-                Serial.println("not restart");
-              }
-            }
-          }
-
-          void led() {
-            switch (count) {
-              case 0:
-    	         digitalWrite(R,LOW);
-    	         digitalWrite(O,LOW);
-    	         digitalWrite(G,LOW);
-    	         digitalWrite(W,LOW);
-    	         delay(a);
-    	         count++;
-               break;
-
-              case 1:
-               while (j<i){
-                digitalWrite(R,HIGH);
-                delay(a);
-    	          digitalWrite(R,LOW);
-    		        delay(a);
-          	    digitalWrite(R,HIGH);
-          	    delay(a);
-      		      j++;
-    	          }
-    	          j=0;
-    	          count++;
-                break;
-
-                case 2:
-    	           digitalWrite(R,0);
-    	           while (j<i){
-    		          digitalWrite(O,HIGH);
-    		          delay(a);
-    		          digitalWrite(O,LOW);
-    		          delay(a);
-          	      digitalWrite(O,HIGH);
-          	      delay(a);
-                  j++;
-    	            }
-    	            j=0;
-    	            count++;
-                  break;
-
-                  case 3:
-    	             digitalWrite(R,0);
-    	             digitalWrite(O,0);
-    	             while (j<i){
-    		              digitalWrite(G,HIGH);
-    		              delay(a);
-    		              digitalWrite(G,LOW);
-    		              delay(a);
-          	          digitalWrite(G,HIGH);
-          	          delay(a);
-                      j++;
-    	                }
-                   j=0;
-    	             count++;
-                   break;
-
-                  case 4:
-  	               digitalWrite(R,0);
-                   digitalWrite(O,0);
-                	 digitalWrite(G,0);
-                   while (j<i){
-                		digitalWrite(W,HIGH);
-    	              delay(a);
-    		            digitalWrite(W,LOW);
-  		              delay(a);
-          	        digitalWrite(W,HIGH);
-        	          delay(a);
-                    j++;
-    	             }
-    	             j=0;
-    	             count=0;
-                   break;
-
-                default:
-    	           digitalWrite(R,0);
-    	           digitalWrite(O,0);
-    	           digitalWrite(G,0);
-    	           digitalWrite(W,0);
-    	           delay(a);
-                 break;
-               }
-             }
-        </xmp>
         <iframe width="900" height="900" src="https://www.tinkercad.com/embed/ihwHMz7rtLb?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <p>open up the "code" to look at the code used in this. we will make a lot of use from the "millis" function, so do take note.</p>
+        <p>first, let's understand how a button is wired. as you can see, the wires are placed like that.</p>
+        <img src="..\..\media\button.png" alt="button wiring">
+        <p>the blue arrows drawn are connected to the digital pin, whereas the ones on the red arrows are connected to ground. the blue and red lines drawn shows that the current will flow like that, which means you cannot connect the ground wire on that side.</p>
+        <p>in the code, you can see "prevt=millis();", which is a must to start the in-built timer. we read the button state "state=digitalRead(B)", and check if the button is 1 (when the button is pressed).</p>
+        <p>the usage of "void" here is to make the code more compact, so i would not need to repeat the code again. in the "void debounce()", we record the most recent time, and check if the previous button state is the same as current button state and if the button state is "pressed". This is to see if the button is being pressed for a long period of time.</p>
+        <p> if the button was pressed for 3 seconds straight, the pattern would reset, setting all the led to 0.</p>
+        <p>in "void led()", we read the number of times the button is pressed, and it corresponds to its respective pattern. it will use the "delay()" function to prevent the user from putting too many inputs at once, hence allowing the user to see the changes.</p>
+        <p>one thing i learnt is that if i connected the leds to vcc, the signals need to be inverted.</p>
+        add video
         </div>
     </div>
   </div>
