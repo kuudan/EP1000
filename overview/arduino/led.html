@@ -20,9 +20,9 @@
           <p>in this page, you will make your own led circuit.</p>
           <p>you will need: 1 led, 1 resistor, 2 wires, 1 breadboard, 1 arduino uno, 1 computer to program the arduino</p>
           <p>first, let's understand an led so that we wont accidentally kill it.</p>
-          <img src="..\..\media\green led.jpg" alt="green led and part"></img>
+          <img src="..\..\media\arduino\circuit\circuit green led.jpg" alt="green led and part"></img>
           <p>as you see from this <a href="https://en.wikipedia.org/wiki/Light-emitting_diode">wikipedia image</a>, the flat side of the led is the negative side of the led. make sure to connect this part to the ground.</p>
-          <img src="..\..\media\Circuit LED.png" alt="an example led circuit"></img>
+          <img src="..\..\media\arduino\circuit\Circuit LED.png" alt="an example led circuit"></img>
           <p>from this image, the cathode (negative side) of the led is connected to the GND (known as ground). The anode (postive side) of the led is connected to a resistor and a number (in this case, 2) on the other side of the arduino.
             The resistor must be placed at the anode side to prevent the current from breaking the led.
             We will explain more about it in detail later in this page. The next section here will talk about the code</p>
@@ -56,7 +56,7 @@
               You use it when there can be a short/open circuit in your circuit.
             </p>
             <p>"void loop()" means that the code in this will run repeatedly, from start to end.</p>
-            <img src="..\..\media\led pin.png" alt="led pin, digital" width="600" height="auto"></img>
+            <img src="..\..\media\arduino\code\led pin.png" alt="led pin, digital" width="600" height="auto"></img>
             <p>
               "digitalWrite" can only be used for the pins on the top side of the circuit.
               The things to write in digitalWrite are the pin number and the state.
@@ -67,8 +67,8 @@
               "delay" here is as it sounds -- it delays the program. it makes the arudino board "sleep" in milliseconds.
               That means nothing can change or happen during this time period, allowing you to see that the led will light up for 1 seconds before being switched off for 1 seconds.
             </p>
-            <img src="..\..\media\Code LED.png" alt="led code"></img>
-            <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video led.mp4" type="video/mp4">
+            <img src="..\..\media\arduino\code\Code LED.png" alt="led code"></img>
+            <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\arduino\video\video led.mp4" type="video/mp4">
               Your browser cannot support this video type (mp4).
             </video>
         </div>

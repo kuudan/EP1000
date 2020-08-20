@@ -20,13 +20,13 @@
         <iframe width="900" height="900" src="https://www.tinkercad.com/embed/ihwHMz7rtLb?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
         <p>open up the "code" to look at the code used in this. we will make a lot of use from the "millis" function, so do take note.</p>
         <p>first, let's understand how a button is wired. as you can see, the wires are placed like that.</p>
-        <img src="..\..\media\button.png" alt="button wiring">
+        <img src="..\..\media\arduino\circuit\circuit button.png" alt="button wiring">
         <p>the blue arrows drawn are connected to the digital pin, whereas the ones on the red arrows are connected to ground. the blue and red lines drawn shows that the current will flow like that, which means you cannot connect the ground wire on that side.</p>
         <p>in the code, you can see "prevt=millis();", which is a must to start the in-built timer. we read the button state "state=digitalRead(B)", and check if the button is 1 (when the button is pressed).</p>
         <p>the usage of "void" here is to make the code more compact, so i would not need to repeat the code again. in the "void debounce()", we record the most recent time, and check if the previous button state is the same as current button state and if the button state is "pressed". This is to see if the button is being pressed for a long period of time.</p>
         <p> if the button was pressed for 3 seconds straight, the pattern would reset, setting all the led to 0.</p>
         <p>in "void led()", we read the number of times the button is pressed, and it corresponds to its respective pattern. it will use the "delay()" function to prevent the user from putting too many inputs at once, hence allowing the user to see the changes.</p>
-        <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video debounce.mp4" type="video/mp4" alt="debouncing"></source> your broswer cannot support this type of video (mp4)</video>
+        <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\arduino\video\video debounce.mp4" type="video/mp4" alt="debouncing"></source> your broswer cannot support this type of video (mp4)</video>
         <p>one thing i learnt is that if i connected the leds to vcc, the signals need to be inverted.</p>
         </div>
     </div>

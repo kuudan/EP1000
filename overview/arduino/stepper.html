@@ -19,10 +19,10 @@
         <div id="main">
           <p>Servo is a type of motor where you can control how the motor moves. The speed of this particular one cannot be controlled, though the position of it is changeable.</p>
           <p>Like other electronics, you'd need to wire up the servo to a pin, and another wire to ground.</p>
-          <img src="..\..\media\Code Servo.png" alt="servo code"></img>
+          <img src="..\..\media\arduino\code\Code Servo.png" alt="servo code"></img>
           <p>This is the example code provided inside the arduino app. I only used a servo for this video below, but the code above says there is a "potpin=0;" yet there is nothing connected to pin 0. That means we are using "noise" (uncontrollable) values which are random as an input.</p>
           <p>the "map()" function here tells us that we will convert the 1st variable to 4 numbers, the 1st and 2nd being the input value range, whereas the 3rd and 4th are the post-converted range.</p>
-          <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video motor.mp4" type="video/mp4">
+          <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\arduino\video\video motor.mp4" type="video/mp4">
             Your browser cannot support this video type (mp4).
           </video>
           <p>For some reason the servo keeps moving only between those few positions. I believe the randomness of the potval has a limited range.
