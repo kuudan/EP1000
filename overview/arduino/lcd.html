@@ -17,27 +17,35 @@
               <a href="..\..\overview.html">Modules</a> |
         </div>
         <div id="main">
-    <p>hey, this page isnt up to date yet. come by later</p>
-    <img src="..\..\media\Code LCD.png" alt="lcd code">
-    <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video lcd.mp4" type="video/mp4">
+          <p>lcd is used as a way to display words and numbers. it's pretty neat, actually. in order to use the lcd though, you need to download this library from the internet
+          called LiquidCrystal_I2C. you can download it <a href="https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/">here</a>.</p>
+    <img src="..\..\media\lcd pins.jpg" alt="lcd pins normal, from zonnepanelen.wouterlood"></img>
+    <p> this is how you normally want to wire up an lcd. it looks very messy, does it not?</p>
+    <img src="..\..\media\lcd simplified.jpg" alt="lcd pins simple, from oniichan_is_ded"></img>
+    <p> luckily, we can wire the lcd like this, with the help of a device called an I2C, stationed at the lcd's back. The wiring are as follows: SDA to A4, SCL to A5, vcc to live wire and gnd to ground. SDA must be at A4 or SDA pin, whereas SCL must be at A5 or the SCL pin</p>
+    <p>
+    <img src="..\..\media\led pin.png" alt="digital pins + SCL and SDA pin locations"></img>
+    the SDA pin is next to the AREAF pin, whereas SCL pin is next to the SDA pin</p>
+    <img src="..\..\media\Code LCD.png" alt="lcd code"></img>
+    <p>you need to include the library that was linked eariler (or if you already have a different one downloaded, dont bother with this line.)<p>
+    <p>to include it, open your arduino program, click "sketch", followed by "include library" and then "add .ZIP Library...". go to where you saved that file, and open it from there. you can delete the downloaded copy after you have done this.</p>
+    <p>"lcd.init()" initializes your lcd. "lcd.backlight()" calls your backlight to turn on. there's also "lcd.clear" to clear screen, "lcd.setCursor(x,y)" where x is horizontal and y is vertical on a coordinates system. (0,0) means top left corner of the lcd screen.
+      max limit depends on the size of your lcd, i.e. 1602A means (15,1) maximum (bottom rigt corner). "lcd.print()" allows you to display what you want them to display. to display a string of text, you need to write ' lcd.print("...")' in your program, where '...' is the text you want to display.</p>
+    <p> this code will count the number of seconds elapsed since the program started in seconds.</p>
+    <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video lcd.mp4" type="video/mp4"></source>
       Your browser cannot support this video type (mp4).
     </video>
-//
-
-1. wiring
-3. explanation
-
-//
+    <p> if you are unable to see the text on your lcd display, chances are you need to adjust the screw on the blue box on the I2C (the black extrusion behind the lcd). it adjusts the sensitivity of the lcd.</p>
+      <p></p>
+    <!-- Tinkercad Circuits LCD doesn't have I2C piggyback, so you need to wire all the pins. I2C LCD is preferred, as it reduces # of pins required.
+    You need to install I2C LCD library to use this display. Do note that there are different versions of the I2C piggyback module, so library must be matched to your specific module.
     lcd (i2c) -> has 16 pins. go look website for details. 2 libaries [wire.h and liquidcrystal.h]. A4 & 5 SDA and SCL respectively. is also @ digital pins, above aref & gnd.
     Each I2C device needs unique address as long as they are on the bus (daily chain connection)
     adjust screw on blue thing at piggyback (black thing at back) to adjust sensitivity.
     makerguide / github for the library, wire.h included in intital install.
     we be using 16x2, so need change the 20x4 to 16x2
-
-    <!-- Tinkercad Circuits LCD doesn't have I2C piggyback, so you need to wire all the pins. I2C LCD is preferred, as it reduces # of pins required.
-You need to install I2C LCD library to use this display. Do note that there are different versions of the I2C piggyback module, so library must be matched to your specific module.
--->https://www.wikihow.com/Wire-a-Potentiometer
-segment display components -> shows numbers only. needs library. can set raw value, decimal number, brightness of display, clearing display.
+    https://www.wikihow.com/Wire-a-Potentiometer  segment display components -> shows numbers only. needs library. can set raw value, decimal number, brightness of display, clearing display.
+-->
         </div>
     </div>
   </div>

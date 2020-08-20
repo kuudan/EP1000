@@ -17,20 +17,20 @@
               <a href="..\..\overview.html">Modules</a> |
         </div>
         <div id="main">
-          <img src="..\..\media\ultrasonic-abdularbi17-1.webp" alt="ultrasonic sensor specifications">
+          <img src="..\..\media\ultrasonic-abdularbi17-1.webp" alt="ultrasonic sensor specifications"></img>
           <p>the ultrasonic sensor sensor (HC-SR04) has 4 pins, the vcc (in-going current) pin, the trig (trigger) pin, the echo pin and the gnd (ground) pin.
           <p>The trig pin is needed to send a signal out, as pointed out in this link: <a href="https://arduino.stackexchange.com/questions/12627/how-to-use-ultrasonic-sensors-trig-pin-and-why-it-is-needed0">source</a>.
             The echo pin is needed to send and receive the signal and calculate the time taken.</p>
           <p>as seen in the image (credits to abdularbi17 @<a href="https://create.arduino.cc/projecthub/abdularbi17">their arduino website</a>), the
             HC-SR04 can detect between 2cm to 450cm, needs to be elevated at 15 degrees to gauge the right distance, and needs a minimum of 0.3cm to pick up the echo it sent out.</p>
-          <img src="..\..\media\ultrasonic-abdularbi17-2.webp" alt="ultrasonic sensor concept">
+          <img src="..\..\media\ultrasonic-abdularbi17-2.webp" alt="ultrasonic sensor concept"></img>
           <p>this image is also from abdularbi17. The left side will always be the one to send out a signal, whereas the right side would receive said signal. In the image, one can notice that there are 2 waves. that means that one wave is before hitting an object (i.e. sending signal) whereas the other wave is after the object is hit (i.e. returning signal).
             This means that the signal travels twice the actual distance.</p>
           <p>the code below shows a few important bits like "Clear the trigpin condition", "pulseIn()" and "distance = duration * 0.034 /2". </p>
           <p>You will need to clear the trigpin condition to ensure it doesnt send a random signal out beforehand.</p>
           <p>pulseIn() reads the changes in a digital signal. For example, if the given value is HIGH, then pulseIn() waits for the signal to go HIGH, and record the time taken before the signal goes to LOW. it can only work between 10ms to 3min, so that means that no value will be provided if it exceeds said timing. There is bound to be some level of error since the timing was done via observation of the device.</p>
           <p>The distance calculation is based off the mathematics and science behind echolocation, since the speed of sound in air is ~340m/s. As our duration is in miliseconds, we converted the speed of sound in air to mm/s, hence the 0.034. The distance is divided by 2 since the sound travels 2 times the distance, one to hit the object and one to return to the sensor.</p>
-          <img src="..\..\media\Code Ultrasonic.png" alt="lcd code">
+          <img src="..\..\media\Code Ultrasonic.png" alt="lcd code"></img>
           <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video ultrasonic.mp4" type="video/mp4">
             Your browser cannot support this video type (mp4).
           </video>

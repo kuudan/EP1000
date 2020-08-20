@@ -17,15 +17,22 @@
               <a href="..\..\overview.html">Modules</a> |
         </div>
         <div id="main">
-          <p>hey, this page isnt up to date yet. come by later</p>
+          <p> A potentiometer is a variable resistor. the 1st and 3rd pin can be either be connected to a live or a ground wire, and the 3rd pin must be the opposite of the 1st pin.
+            The 2nd pin is the data pin, and you will need to connect it to any of the analog pins.</p>
+            <img src="..\..\media\led pin.png" alt="led digital pin">
+          <p>Alternatively, you can connect the data pin to a digital signal that is pwm-friendly (i.e. there is a "~" symbol next to the number.)</p>
+
           <img src="..\..\media\Code potmeter loop.png" alt="original code">
           <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video potentiometer v1.mp4" type="video/mp4">
             Your browser cannot support this video type (mp4).
           </video>
+          <p>as you see in the video, the led brightens and dampens multiple times with one full twist of the potentiometer. as the value input for analogWrite() always ranges from 0 to 255,
+            since the potentiometer takes in a value between 0 to 1023, the resulting code is such that it brightens and then darkens. As such, it is important to map the values accordingly.</p>
           <img src="..\..\media\Code potmeter no loop.png" alt="updated code">
           <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video potentiometer v2.mp4" type="video/mp4">
             Your browser cannot support this video type (mp4).
           </video>
+          <p>with the addition of the code where map is added, the code now ensures that the led is only at max brightness after 1 whole twist, or no light at the other end.<p>
         </div>
     </div>
   </div>

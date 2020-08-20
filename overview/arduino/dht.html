@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anthony's Library</title>
+  <link rel="stylesheet" type="text/css" href="..\..\css\style.css"/>
+</head>
+<body>
+  <div id="header">
+    <h1>DHT</h1>
+  </div>
+  <div id="container">
+    <div id="content">
+        <div id="nav">
+          <h3> Navigation --> |
+              <a href="..\..\index.html"> Home</a> |
+              <a href="..\..\aboutme.html">About Me</a> |
+              <a href="..\..\overview.html">Modules</a> |
+        </div>
+        <div id="main">
+          <p> for DHT sensor (that is, temperature and humidity sensor), here is the wiring for a 4-pin DHT sensor.</p>
+          <img src="..\..\media\dht pin.png" alt ="dht wiring"></img>
+          <p>1st wire to vcc, 2nd wire is the data pin, it goes to a digital pin, 3rd pin is unused, 4th pin goes to ground.</p>
+          <p>NOTE: this code is based off the example code and modified to remove degrees Fahrenheit in the library provided via <a href="https://www.arduino.cc/reference/en/libraries/dht-sensor-library/">here</a>. alternatively, you can search it up in the arduino program itself (sketch -> include libraries -> manage libraries)</p>
+          <p> for display purposes, I have added in the code for lcd into the program (you can find an example code of it <a href="lcd.html">here</a>).</p>
+    <img src="..\..\media\code dht pt 1.png" alt="dht code"></img>
+    <p>in this part of the code, we include the library DHT.h and LiquidCrystal_I2C.h, set the pin number for the dht data pin and declare what dht sensor and lcd model we are using. we also initialized the lcd and the dht sensor so that they can begin recording / displaying.</p>
+    <img src="..\..\media\code dht pt 2.png" alt="dht code"></img>
+    <p> in the looping part of the program, we read the humidity first, followed by temperature in degree Celcius. We then check if the sensor has failed to read it. Typically, when it cant read properly, it's likely you connected the pins wrongly or programmed the pin to be in the wrong place. if your vcc and gnd pins are wrongly placed, you wont even be able to run the program. it will end the program at that point.</p>
+    <p> if it didnt fail to read, it will compute the temperature and humidity. After which, we display the temperature and humidity accordingly.</p>
+    <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video dht.mp4" type="video/mp4"></source>
+      Your browser cannot support this video type (mp4).
+    </video>
+  </div>
+    </div>
+  </div>
+  <div id="footer">
+    <h4><p><a href="..\arduino.html">Return to Arduino Page</a></p></h4>
+  </div>
+</body>
+</html>

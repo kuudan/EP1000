@@ -18,10 +18,21 @@
         </div>
         <div id="main">
           <h4>About RBG LEDs</h4>
-          <p>They have 3 leds inside of them, Red Green Blue. It allows this combined LED to output colors of many hues via adjusting the voltage for each individual led.</p>
-          <img src="rbg led.png" alt="image of rbg led wiring">
-          <p> the above image  will help in preventing you from breaking the component by accident.</p>
+          <p>They have 3 leds inside of them, Red Green and Blue. It allows this combined LED to output colors of many hues via adjusting the voltage for each individual led.</p>
+          <img src="..\..\media\rbg led.png" alt="image of rbg led wiring ft muhammad-aqib">
+          <p> the above image  will help in preventing you from breaking the component by accident. for the common cathode, you connect the 2nd pin from left to ground. for the commmon anode, connect the same pin to vcc.</p>
+          <p> by mixing the values for each internal light ( red, green, blue ), you can get multiple colours.
           <iframe width="900" height="900" src="https://www.tinkercad.com/embed/8BNgQtzcoNa?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+          <img src="..\..\media\code ldr rgb pt 1.png" alt="lcd code"></img>
+          <img src="..\..\media\code ldr rgb pt 2.png" alt="lcd code"></img>
+          <img src="..\..\media\code ldr rgb pt 3.png" alt="lcd code"></img>
+          <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\video ldr rgb.mp4" type="video/mp4"></source>
+            Your browser cannot support this video type (mp4).
+          </video>
+          <p> The ldr in this video (on the breadboard) takes in the ambient light and measures accordingly. The more light there is, the higher the value measured.
+            By using this, I write a random mathematical equation in order to let each led in the rgb led give a different intensity, thereby giving a variety of colors.
+            Of course, the values must be between 0 to 1023, so the program also checks for it before putting it as an output for the rgb led.</p>
+          <p> as you can see, my rgb led only has 3 different colors here, as i have set it to only these three colors. I tried varying the colors a bit, but there is only red, blue, cyan, green available.</p>
         </div>
     </div>
   </div>
