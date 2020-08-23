@@ -17,18 +17,18 @@
               <a href="..\..\overview.html">Modules</a> |
         </div>
         <div id="main">
+          <div id="nav"> <a href="#f3d">design</a> | <a href="#code">code</a> | <a href="#video">video</a> </div>
           <ul>
-            <p>General Idea: I would like to make a mood lamp that can display eniviromental readings</p>
+            <p>General Idea: I would like to make a mood lamp that can display eniviromental readings, which can be modified by the user with ease.</p>
             <h5>Specifics:</h5>
             <ul>
-              <li>1. It will only react when there is an object within a distance</li>
-              <li>2. It will read temperature. If it is too hot, the lamp will turn blue and the display will say that its too hot.</li>
-              <li>3. It will read humidity. If it is too humid, the lamp would turn red and ask you to create some ventilation</li>
-              <li>4. If there is something too near the lamp, the lamp will turn red and tell you to move away from it.</li>
-              <li>5. By default, the lamp will be X(undecided)</li>
-              <li>6. If, after a certain period of time, there is no change in response, the lamp will switch its lights off when there is no object in the surroundings/no change in conditions from default (when the light is X, the neutral state for this project)</li>
-              <li>7. A button to switch on and off the lights</li>
-              <li>8. A potential meter to allow users to adjust conditions in 1., 2., 3.</li>
+              <li>1. It will read distance. If you are too close, the lamp will turn green and the display says you are too close or far.</li>
+              <li>2. It will read temperature. If it is too hot, the lamp will turn blue and the display will say that its too hot or cold.</li>
+              <li>3. It will read humidity. If it is too humid, the lamp would turn cyan and the display will say it's too humid or dry.</li>
+              <li>4. If 1., 2., 3., are all triggered, the lamp will turn red while rotating between the comments for each state.</li>
+              <li>5. By default, the lamp will be not be light up.</li>
+              <li>6. A potential meter to allow users to adjust the range of the conditions in 1., 2., 3.</li>
+              <li>7. A button to confirm the settings of the range in 6.</li>
             </ul>
             <h5>Who is it intended for:</h5>
               <p>students who use a computer for long periods of time</p>
@@ -46,12 +46,12 @@
                 <li>1 Arduino</li>
                 <li>1 LCD display</li>
                 <li>1 RGB LED should be needed</li>
-                <li>16 male to female wires</li>
+                <li>15 male to female wires</li>
                 <li>1 potential meter</li>
                 <li>1 ultrasonic sensor</li>
                 <li>translucent acrylic</li>
               </ul>
-              <h5>Designs</h5>
+              <a href="#f3d"><h5 id="f3d">Designs</h5></a>
               <img src="..\..\media\fp\idea\idea 1.png"></img>
               <p>This was my first idea, after looking through several mood lamps online.
                 As the A part of it is curved, and i intended it to be made of acrylic, i found that it was impossible to do it since I had no time to do it, due to my other projects.
@@ -64,11 +64,13 @@
               <p>idea 3. the exterior is the same as idea 2, but this time the insides are elborated on, and instead of making the base round, it is instead sqaure/rectangle to allow more space.
                 it is a multi-layer stacking where you gradually add items to each layer, where layer 1 is the bottom of the base, where it fits the arduino and battery.
                  layer 2 fits the bread board, and some screws to secure it and holes for layer 3 to go through. the 3rd layer is made to fit the LED.</p>
+              <img src="..\..\media\fp\idea\circuit.png"></img>
+              <p> in the mean time, i came up with a circuit for the project. in the image: u/s = ultrasonic sensor, b/b = breadboard, vcc = source, gnd = ground, PB = push button, pot= potentiometer, rgb = rgb led, ca = cathode.</p>
               <img src="..\..\media\fp\3d\v0.png"></img>
               <p>So at first, i tried to make the base out of laser cut, but i forgotten that i needed to make parts to secure the arduino board, breadboard and other devices, so i scrapped this model.</p>
               <img src="..\..\media\fp\3d\layer 2 v1.png"></img>
               <p> following my third idea, i tried to make a 2nd layer, but this kind of design is bound to fail as it has very little supports after I discussed with others about this.</p>
-              <img src="..\..\media\fp\3d\v0.png"></img>
+              <img src="..\..\media\fp\3d\v0 wo cover.png"></img>
               <p>this is the base idea (finalized) for the model, without any securing for the LCD and Arduino Board. After that, i made a new save on a new model. (wow, i went 57 versions into this model)</p>
               <img src="..\..\media\fp\3d\layer 2 v2 top.png"></img>
               <img src="..\..\media\fp\3d\layer 2 v2 side.png"></img>
@@ -87,23 +89,482 @@
                 on my 2nd printing of the base, i measured the securing points for the lcd wrongly, so i needed to reprint it.
                 for my cover, i printed the wrong dimensions for the led cover and  ultrasonic sensor, then adjusted it to be bigger because i forgotten to take into consideration of the wires pushing the layer up.
               </p>
-              <img src="..\..\media\fp\3d\v3 wo pink.jpeg"></img>
+              <img src="..\..\media\fp\3d\v3 wo pink.png"></img>
+              <img src="..\..\media\fp\3d\v3 base.png"></img>
               <p>printed 2 parts to secure the layer 2, although it was unnecessary after wiring it, since the wires pushed the layer up to tighten it with the model.</p>
-              <img src="..\..\media\fp\building\secure.jpeg" height="300" width="auto"></img>
-              <img src="..\..\media\fp\building\secure2.jpeg" height="300" width="auto"></img>
+              <img src="..\..\media\fp\building\secure.jpeg" height="500" width="auto"></img>
+              <img src="..\..\media\fp\building\secure2.jpeg" height="500" width="auto"></img>
               <p>laser cut some covers for the devices that are exposed.</p>
               <img src="..\..\media\fp\building\all together now.jpeg" height="300" width="auto"></img>
-              <p>the wiring was pretty poorly done, since i didnt think about it and it was too late to redo the design to incoporate the wires.</p>
-              <img src="..\..\media\fp\building\BOMB.jpeg" height="300" width="auto"></img>
-              <p>
-                this is how the final model looks like, cover and base. after printing, it looks like this:
-              </p>
-              <img src="..\..\media\fp\building\side5.jpeg" height="300" width="auto"></img>
-              <img src="..\..\media\fp\building\side6.jpeg" height="300" width="auto"></img>
-              <img src="..\..\media\fp\building\side7.jpeg" height="300" width="auto"></img>
-              <img src="..\..\media\fp\building\side9.jpeg" height="300" width="auto"></img>
+              <p>the wiring was pretty poorly done, since i didnt think about the wires in the creation of the models and it was too late to redo the design to incoporate the wires by then.</p>
+              <a href="#here"><img id="#here" src="..\..\media\fp\building\BOMB.jpeg" height="500" width="auto"></img></a>
+              <p>this is how the final model looks like, cover and base. after printing, it looks like this (did not take images of the final versions individually):</p>
+              <img src="..\..\media\fp\building\side5.jpeg" height="500" width="auto"></img>
+              <img src="..\..\media\fp\building\side6.jpeg" height="500" width="auto"></img>
+              <img src="..\..\media\fp\building\side7.jpeg" height="500" width="auto"></img>
+              <img src="..\..\media\fp\building\side9.jpeg" height="500" width="auto"></img>
+              <p> problems i encountered with wiring: it pushed my layer 2 upwards, so now it is very tight and hard to remove it when there is a loose wire.
+                luckily (is it?), it is too tight to the point where the wires barely budge.
+                another problem with it was that it was hard to do wire management and color coding.
+                as such, i couldnt do much about it, so i twisted the wires together to remind myself "these wires go to the same device",
+                 like in this <a href="#here">image</a> (that will link you to this page, to the image i want to refer you to).</p>
+              <p> problems i encountered with designing: I didnt know what a mood lamp was, so I took a few days to come up with the ideas via googling. they didnt help as much as i thought it would, though they gave me a general idea on how it looks like.
+                I was too hasty everytime i went to print, because i felt quite stressed at the unexpected events in one of my modules' group work, which i ended up doing practically everything myself.
+                I was unable to measure the devices properly with a ruler, so i took some models from grabcad to use as reference models in the making of my laser cut and 3d print models. I did a mistake of using a 3mm translucent acrylic instead of a 2mm one, so i had to redo the parameters on my base.
+                Because my idea was not easy to make via laser cut (i.e. extrusions on the base to secure arduino board and lcd), i had to look out for the secure points and restrict myself to 3d printing for making the base.</p>
           </ul>
           <h4>programming</h4>
+          <p>As most parts of the program was already documented in the website (@<a href="..\arduino.html" target="_blank">arduino page of my website</a>), i only needed to do one part of the program -- which was writing the logic to finish the setup for the mood lamp.</p>
+            <a href="#code"><p id="code">Here is the code that I wrote:</p></a>
+            <p>note: you need to have the DHT and the LCD libraries to make this work</p>
+            <img src="..\..\media\fp\code\finalized.jpeg"></img> <p>wow, i made about 450 lines (since this was before i removed a few unnecessary lines)</p>
+            <p>variables that i declared</p>
+            <xmp>
+#include <LiquidCrystal_I2C.h>
+#include "DHT.h"
+
+//declaration of constant values
+const int ledr = A0, ledg = A1, ledb = A2; //output white-orange-red RGB LED R , G , B. pin.
+const int pot = A3; //pullup input white POTENTIOMETER. pin
+const int but = 3; //pullup input blue-green-orange BUTTON. pin
+//lcd sda  A4 output? green for reference
+//lcd sdl A5 output? red for reference
+const int trig = 5; //   yellow connection TRIG PIN
+const int echo = 4; // blue connection ECHO PIN
+#define dhtp 2  //pullup input orange of blue-orange-white // DATA PIN DHT11
+#define dhtt DHT11 // WHICH DHT MODEL IS USED
+
+//declaration of nonconstant values
+double distance; // DISTANCE
+int duration; // DURATION
+int bstate; //to store button state
+int tx=-1,ty=-1, dx=-1,dy=-1, hx=-1,hy=-1; // x lower limit, y upper limit, t = temp h = humid d = dist
+int res[3]={0,0,0}; //response values, left to right: t, h, d. 1 means out of range, 0 means within range.
+long ti; //internal time comparism
+int ur; // potmeter value
+int state=0; // range from 0 to 5. 0 n 1 for temp, 2 n 3 for humid, 4 n 5 for dist
+float te,hu; // t=temperature, h=humid
+bool done=0; //whether set has been done (1) or not done (0)
+
+//declaration of special inputs from libraries
+DHT dht(dhtp,dhtt); //DECLARATION OF DHT
+LiquidCrystal_I2C lcd(0x27,16,2); //SIZE OF LCD
+</xmp>
+<p>from the DHT example code, edits done: removed all code relating to degrees Fahrenheit, changed code about Serial.print to lcd.print</p>
+<xmp>
+void ths(){
+  // Wait a few seconds between measurements.
+  delay(2000);
+
+  // Reading temperature or humidity takes about 250 milliseconds!
+  // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
+  float h = dht.readHumidity();
+  hu=h;
+  // Read temperature as Celsius (the default)
+  float t = dht.readTemperature();
+  te=t;
+  // Read temperature as Fahrenheit (isFahrenheit = true)
+  // float f = dht.readTemperature(true);
+
+  // Check if any reads failed and exit early (to try again).
+  if (isnan(h) || isnan(t) /*|| isnan(f)*/) {
+    lcd.print(F("Failed to read"));
+    lcd.setCursor(0,1);
+    lcd.print(F("from DHT sensor"));
+    return;
+  }
+
+  // Compute heat index in Fahrenheit (the default)
+ // float hif = dht.computeHeatIndex(f, h);
+  // Compute heat index in Celsius (isFahreheit = false)
+  float hic = dht.computeHeatIndex(t, h, false);
+}
+</xmp>
+<p>from ultrasonic sensor code, no changes as it was taught to me by my senior. removed code regarding Serial.print</p>
+<xmp>
+void uss(){ // code for ultrasonic sensor
+
+  digitalWrite(trig, LOW);
+  delay(5);
+  digitalWrite(trig,HIGH);
+  delay(10);
+  digitalWrite(trig, LOW);
+
+  duration= pulseIn(echo, HIGH);
+  distance=(duration/2)*0.0343; // v*t=s, v=343m/s=343x100cm/s=0.0343cm/ms
+}
+</xmp>
+<p>void program "test", that runs during the setup to show the user what the current environment is like. also tests the condition of the dht and ultrasonic sensors of whether they can read the environment.</p>
+<xmp>
+void test(){
+  lcd.clear();
+  lcd.print("reading current");
+  lcd.setCursor(0,1);
+  lcd.print("values");
+  delay(1000);
+
+  lcd.clear();
+  ths();
+  lcd.print(F("Te: "));
+  lcd.print(te);
+  lcd.print(F(" deg C"));
+  delay(2000);
+  lcd.clear();
+  lcd.print(F("Hu: "));
+  lcd.print(hu);
+  lcd.print(" %");
+  delay(2000);
+
+  lcd.clear();
+  uss();
+  lcd.print("Distance: ");
+  lcd.print(distance);
+  delay(2000);
+}
+</xmp>
+<p>void programs "touch()" and "debounce()", where touch checks whether the button was pressed, and debounce to see if it was a long press (500ms). There is nothing done if there is a short press (less than 500ms) </p>
+<xmp>
+void touch(){
+  bstate=digitalRead(but);
+  if (bstate==1)
+  {
+    debounce(state);
+  }
+}
+</xmp>
+<xmp>
+void debounce(int val){
+  int prevstate = bstate;
+  ti=millis();
+  while (bstate=1 && prevstate==bstate){
+    lcd.clear();
+    bstate=digitalRead(but);
+    if (millis()-ti>=500) {
+      lcd.clear();
+      switch (val)
+      {
+        case 0:{
+          lcd.print("lower temp set @");
+          lcd.setCursor(0,1);
+          tx=ur;
+          lcd.print(tx);
+          lcd.print(" deg C");
+          delay(1000);
+          break;
+        }
+        case 1:{
+          lcd.print("upper temp set @");
+          lcd.setCursor(0,1);
+          ty=ur;
+          lcd.print(ty);
+          lcd.print(" deg C");
+          delay(1000);
+          break;
+          }
+         case 2:{
+          lcd.print("lower humid set @");
+          lcd.setCursor(0,1);
+          hx=ur;
+          lcd.print(hx);
+          lcd.print(" %");
+          delay(1000);
+          break;
+          }
+         case 3:{
+          lcd.print("upper humid set @");
+          lcd.setCursor(0,1);
+          hy=ur;
+          lcd.print(hy);
+          lcd.print(" %");
+          delay(1000);
+          break;
+          }
+         case 4:{
+          lcd.print("lower dist set @");
+          lcd.setCursor(0,1);
+          dx=ur;
+          lcd.print(dx);
+          lcd.print(" cm");
+          delay(1000);
+          break;
+          }
+         case 5:{
+          lcd.print("upper dist set @");
+          lcd.setCursor(0,1);
+          dy=ur;
+          lcd.print(dy);
+          lcd.print(" cm");
+          delay(1000);
+          break;
+          }
+      }
+    }
+  }
+}
+</xmp>
+<p>void program "set()", that sets the end-user defined parameters for humidity, temperature and distance.
+  if the upper limit is lower than the lower limit, the lcd will tell you that "upper >= lower" and forces you to re set it.
+  Else, it will proceed unto the next setting, until you have done all 3 settings.</p>
+<xmp>
+void set() {
+if (state==0 || state ==1){ //0 - lower temp limit, 1 - upper temp limit
+    while (state==0) {
+      lcd.clear();
+    lcd.setCursor(0,0);
+       lcd.print("lower limit te");
+       ur=analogRead(pot);
+       ur=map(ur,0,1023,0,40); //sets default lower and upper to 0 and 40
+       lcd.setCursor(0,1);
+       lcd.print(ur); //outputs pot meter value
+       lcd.print(" deg C");
+       delay(1000);
+       touch();
+       if (tx>-1) state++;
+       }
+
+    while (state==1)
+    {
+      lcd.clear();
+    lcd.setCursor(0,0);
+       lcd.print("upper limit te");
+       ur=analogRead(pot);
+       ur=map(ur,0,1023,0,40); //sets default lower and upper to 0 and 40
+       lcd.setCursor(0,1);
+       lcd.print(ur); //outputs pot meter value
+       lcd.print(" deg C");
+       delay(1000);
+       touch();
+       if (ty>-1) state++;
+    }
+       if (ty<=tx){
+        lcd.clear();
+        lcd.print("upper <= lower");
+        delay(1000);
+        ty=-1;
+        tx=-1;
+        state=0;
+        }
+       }
+
+  if (state== 2 || state == 3){
+    while (state==2) {
+      lcd.clear();
+    lcd.setCursor(0,0);
+       lcd.print("lower limit hu");
+       ur=analogRead(pot);
+       ur=map(ur,0,1023,0,100); //sets default lower and upper to 0 and 40
+       lcd.setCursor(0,1);
+       lcd.print(ur);
+       lcd.print(" %");
+       delay(1000);
+       touch();
+       if (hx>-1){
+        state++;
+       }
+       }
+
+    while (state==3)
+    {
+      lcd.clear();
+    lcd.setCursor(0,0);
+       lcd.print("upper limit hu");
+       ur=analogRead(pot);
+       ur=map(ur,0,1023,0,100); //sets default lower and upper to 0 and 40
+       lcd.setCursor(0,1);
+       lcd.print(ur);
+       lcd.print(" %");
+       delay(1000);
+       touch();
+       if (hy>-1){
+          state++;
+       }
+    }
+       if (hy<=hx){
+        lcd.clear();
+        lcd.print("upper <= lower");
+        delay(1000);
+        hy=-1;
+        hx=-1;
+        state=2;
+       }
+  }
+
+  if (state==4 || state == 5){
+    while (state==4) {
+    lcd.setCursor(0,0);
+       lcd.print("lower limit di");
+       ur=analogRead(pot);
+       ur=map(ur,0,1023,15,300); //sets default lower and upper to 0 and 40
+       lcd.setCursor(0,1);
+       lcd.print(ur);
+       lcd.print(" cm");
+       delay(1000);
+       touch();
+       lcd.clear();
+       if (dx>-1){
+        state++;
+       }
+       }
+
+    while (state==5) {
+    lcd.setCursor(0,0);
+       lcd.print("upper limit di");
+       ur=analogRead(pot);
+       ur=map(ur,0,1023,15,300); //sets default lower and upper to 0 and 40
+       lcd.setCursor(0,1);
+       lcd.print(ur);
+       lcd.print(" cm");
+       delay(1000);
+       lcd.clear();
+       touch();
+       if (dy>-1){
+          state++;
+          done=1;
+       }
+    }
+       if (dy<=dx){
+        lcd.clear();
+        lcd.print("upper <= lower");
+        delay(1000);
+        dy=-1;
+        dx=-1;
+        state=4;
+       }
+    }
+}
+</xmp>
+<p>this part of the program checks the array, to display the respective colors</p>
+<xmp>
+void RGB() {
+  //problem: can only display 4 colors
+  //fix: use only 5 responses.
+  // {0,0,0} = no light
+  // {1,0,0} = cyan, temperature
+  // {0,1,0} = blue, humid
+  // {0,0,1} = green, distance
+  // {1,1,1} = red, all 3.
+  const int high=1023, low=0;
+  if (res[0]==1 && res[1]==1 && res[2]==1) {
+      analogWrite(ledr,high);
+      analogWrite(ledb,low);
+      analogWrite(ledg,low);
+    }
+   else {
+     if (res[0]==1){
+         analogWrite(ledr,low);
+         analogWrite(ledb,high);
+         analogWrite(ledg,high);
+         delay(500);
+       }
+     if (res[1]==1){
+         analogWrite(ledr,low);
+         analogWrite(ledb,high);
+         analogWrite(ledg,low);
+         delay(500);
+       }
+     if (res[2]==1){
+         analogWrite(ledr,low);
+         analogWrite(ledb,low);
+         analogWrite(ledg,high);
+         delay(500);
+       }
+    if (res[0]==0 && res[1]==0 && res[2]==0){
+         analogWrite(ledr,low);
+         analogWrite(ledb,low);
+         analogWrite(ledg,low);
+      }
+   }
+}
+</xmp>
+<p>the actual main part of the program, where it reads from the sensors and lights up accordingly.</p>
+<xmp>
+void mainprog() {
+  if (millis()-ti>2000){
+    ths();
+    if (te<tx || te>ty){
+      lcd.clear();
+      lcd.print("too hot or cold");
+      lcd.setCursor(0,1);
+      lcd.print(te);
+      lcd.print(" deg C");
+      delay(1000);
+      res[0]=1;//1234567890123456
+    }
+    else res[0]=0;
+    if (hu<hx || hu>hy){
+      lcd.clear();
+      lcd.print("too dry or humid");
+      lcd.setCursor(0,1);
+      lcd.print(hu);
+      lcd.print(" % humid");
+      delay(1000);
+      res[1]=1;//1234567890123456
+    }
+    else res[1]=0;
+    uss();
+    if (distance<dx || distance>dy){
+      lcd.clear();
+      lcd.print("too far or near");
+      lcd.setCursor(0,1);
+      lcd.print(distance);
+      lcd.print(" cm");
+      delay(1000);
+      res[2]=1;//1234567890123456
+    }
+    else res[2]=0;
+    if (res[0]==0 && res[1]==0 && res[2]==0){
+      lcd.clear();
+      lcd.print("all clear");
+      delay(1000);
+    }
+    RGB();
+    ti=millis();
+  }
+}
+</xmp>
+<p>the setup of the program, where it declares the pinmode, initializes the lcd, starts the internal timer, starts the dht sensor, runs the void program test().</p>
+<xmp>
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(ledr,OUTPUT);
+  pinMode(ledb,OUTPUT);
+  pinMode(ledg,OUTPUT);
+  pinMode(pot,INPUT_PULLUP);
+  pinMode(but,INPUT_PULLUP);
+  pinMode(trig,OUTPUT);
+  pinMode(echo,INPUT);
+  lcd.init(); //starts the lcd
+  lcd.backlight(); // not sure if needed, but lights up the backlight. probably to indicate working condition
+  lcd.setCursor(0,0); // sets cursor to 0,0 (top left corner, max is 16,2 for this lcd. in coordinate terms, that is (15,1)
+  lcd.clear(); //clear screen
+  delay(1000); // give time to refresh
+  lcd.print("Startup Complete");
+  delay(1000); // allows user to comprehend startup
+  dht.begin(); //begins measuring (when called out)
+  test(); // displays current parameters (temp, humid, dist). also checks if error in dht.
+  ti=millis(); // starts timer
+  done=0; // to indicate that set() has not been done
+}
+</xmp>
+<p>the part of the program that is looping endlessly. it really looks clean here, just because for some reason i wrote everything into mainprog().</p>
+<xmp>
+void loop() {
+  // put your main code here, to run repeatedly:
+  if (done==0)  set(); //set is the setup for tolerances for the program to activate RGB LED
+  else {
+    lcd.clear();
+    mainprog(); // calls out main program, which is the actual mood lamp part (lol)
+    RGB(); //calls out RGB, which will compute the measurement to RGB LED accordingly
+    touch();
+    }
+  }</xmp>
+
+  <a href="#video"><h4 id="video">video</h4></a>
+    <video preload="metadata" controls height="600" width="600" muted><source src="..\..\media\fp\DEMO.mp4" type="video/mp4"></video>
+
+<p>here are the files for the project; the code and a zip file of the models, f3d format</p>
+        <a href="..\..\media\arduino\fp\code\fp.ino"><img src="..\..\media\download button 2.png" alt="download here"></a>
+        <a href="..\..\media\arduino\Modelling Files.ino"><img src="..\..\media\download button.png" alt="download here"></a>
         </div>
     </div>
   </div>
